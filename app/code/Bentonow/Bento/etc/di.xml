@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="bentonow_bento_job_listing_data_source" xsi:type="string">Bentonow\Bento\Model\ResourceModel\Job\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="Bentonow\Bento\Model\ResourceModel\Job\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">bentonow_bento_job</argument>
+            <argument name="resourceModel" xsi:type="string">Bentonow\Bento\Model\ResourceModel\Job</argument>
+        </arguments>
+    </virtualType>
+    <type name="Bentonow\Bento\Observer\CustomerRegister">
+        <arguments>
+            <argument name="jobFactory" xsi:type="object">Bentonow\Bento\Model\JobFactory</argument>
+            <argument name="jsonSerializer" xsi:type="object">Magento\Framework\Serialize\Serializer\Json</argument>
+        </arguments>
+    </type>
+    <type name="Bentonow\Bento\Observer\OrderPlace">
+        <arguments>
+            <argument name="jobFactory" xsi:type="object">Bentonow\Bento\Model\JobFactory</argument>
+            <argument name="jsonSerializer" xsi:type="object">Magento\Framework\Serialize\Serializer\Json</argument>
+        </arguments>
+    </type>
+    <type name="Bentonow\Bento\Observer\OrderClosed">
+        <arguments>
+            <argument name="jobFactory" xsi:type="object">Bentonow\Bento\Model\JobFactory</argument>
+            <argument name="jsonSerializer" xsi:type="object">Magento\Framework\Serialize\Serializer\Json</argument>
+        </arguments>
+    </type>
+    <type name="Bentonow\Bento\Observer\OrderShipped">
+        <arguments>
+            <argument name="jobFactory" xsi:type="object">Bentonow\Bento\Model\JobFactory</argument>
+            <argument name="jsonSerializer" xsi:type="object">Magento\Framework\Serialize\Serializer\Json</argument>
+        </arguments>
+    </type>
+    <type name="Bentonow\Bento\Observer\OrderRefunded">
+        <arguments>
+            <argument name="jobFactory" xsi:type="object">Bentonow\Bento\Model\JobFactory</argument>
+            <argument name="jsonSerializer" xsi:type="object">Magento\Framework\Serialize\Serializer\Json</argument>
+        </arguments>
+    </type>
+    <type name="Bentonow\Bento\Observer\OrderHeld">
+        <arguments>
+            <argument name="jobFactory" xsi:type="object">Bentonow\Bento\Model\JobFactory</argument>
+            <argument name="jsonSerializer" xsi:type="object">Magento\Framework\Serialize\Serializer\Json</argument>
+        </arguments>
+    </type>
+    <type name="Bentonow\Bento\Observer\OrderCanceled">
+        <arguments>
+            <argument name="jobFactory" xsi:type="object">Bentonow\Bento\Model\JobFactory</argument>
+            <argument name="jsonSerializer" xsi:type="object">Magento\Framework\Serialize\Serializer\Json</argument>
+        </arguments>
+    </type>
+</config>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="customer_register_success">
+        <observer name="bentonow_bento_customer_register" instance="Bentonow\Bento\Observer\CustomerRegister" />
+    </event>
+    <event name="sales_order_place_after">
+        <observer name="bentonow_bento_order_place" instance="Bentonow\Bento\Observer\OrderPlace" />
+    </event>
+    <event name="sales_order_save_after">
+        <observer name="bentonow_bento_order_closed" instance="Bentonow\Bento\Observer\OrderClosed" />
+    </event>
+    <event name="sales_order_shipment_save_after">
+        <observer name="bentonow_bento_order_shipped" instance="Bentonow\Bento\Observer\OrderShipped" />
+    </event>
+    <event name="sales_order_creditmemo_save_after">
+        <observer name="bentonow_bento_order_refunded" instance="Bentonow\Bento\Observer\OrderRefunded" />
+    </event>
+    <event name="sales_order_hold_after">
+        <observer name="bentonow_bento_order_held" instance="Bentonow\Bento\Observer\OrderHeld" />
+    </event>
+    <event name="order_cancel_after">
+        <observer name="bentonow_bento_order_canceled" instance="Bentonow\Bento\Observer\OrderCanceled" />
+    </event>
+</config>

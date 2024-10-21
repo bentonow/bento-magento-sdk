@@ -1,0 +1,23 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+
+# Magento 2 specific
+/vendor/
+/generated/
+/pub/static/_cache/
+/var/
+/setup/
+
+# IDE specific (PhpStorm, VS Code, etc.)
+.idea/
+.vscode/
+
+# Composer
+composer.phar
+/vendor/
+
+# Node modules (if using frontend build tools)
+/node_modules/
