@@ -27,12 +27,12 @@ class JobActions extends Column
             foreach ($dataSource['data']['items'] as & $item) {
                 if (isset($item['job_id'])) {
                     $item[$this->getData('name')] = [
-                        'edit' => [
+                        'requeue' => [
                             'href' => $this->urlBuilder->getUrl(
-                                'bentonow_bento/job/edit',
+                                'bentonow_bento/job/requeue',
                                 ['job_id' => $item['job_id']]
                             ),
-                            'label' => __('Edit')
+                            'label' => __('Requeue')
                         ],
                         'delete' => [
                             'href' => $this->urlBuilder->getUrl(
@@ -41,7 +41,7 @@ class JobActions extends Column
                             ),
                             'label' => __('Delete'),
                             'confirm' => [
-                                'title' => __('Delete "${ $.$data.title }"'),
+                                'title' => __('Delete Job'),
                                 'message' => __('Are you sure you want to delete this job?')
                             ]
                         ]

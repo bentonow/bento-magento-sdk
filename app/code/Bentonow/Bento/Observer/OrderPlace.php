@@ -24,13 +24,13 @@ class OrderPlace implements ObserverInterface
         $order = $observer->getEvent()->getOrder();
 
         $jobData = [
-            'job_type' => 'purchase',
+            'job_type' => 'order_created',
             'status' => 'pending',
             'data' => $this->jsonSerializer->serialize([
                 'events' => [
                     [
                         'email' => $order->getCustomerEmail(),
-                        'type' => '$purchase',
+                        'type' => '$OrderCreated',
                         'fields' => [
                             'first_name' => $order->getCustomerFirstname(),
                             'last_name' => $order->getCustomerLastname(),

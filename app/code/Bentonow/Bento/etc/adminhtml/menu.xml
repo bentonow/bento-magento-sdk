@@ -3,5 +3,6 @@
     <menu>
         <add id="Bentonow_Bento::bento" title="Bento" module="Bentonow_Bento" sortOrder="100" resource="Bentonow_Bento::bento"/>
         <add id="Bentonow_Bento::job" title="Bento Jobs" module="Bentonow_Bento" sortOrder="10" action="bentonow_bento/job" resource="Bentonow_Bento::job" parent="Bentonow_Bento::bento"/>
+        <add id="Bentonow_Bento::config" title="Configuration" module="Bentonow_Bento" sortOrder="20" action="adminhtml/system_config/edit/section/bentonow_bento" resource="Bentonow_Bento::config" parent="Bentonow_Bento::bento"/>
     </menu>
 </config>

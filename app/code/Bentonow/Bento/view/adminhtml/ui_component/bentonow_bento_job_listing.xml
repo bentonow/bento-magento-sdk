@@ -27,11 +27,6 @@
         </dataProvider>
     </dataSource>
     <columns name="bentonow_bento_job_columns">
-        <selectionsColumn name="ids">
-            <settings>
-                <indexField>job_id</indexField>
-            </settings>
-        </selectionsColumn>
         <column name="job_id">
             <settings>
                 <filter>textRange</filter>
@@ -49,6 +44,12 @@
             <settings>
                 <filter>text</filter>
                 <label translate="true">Status</label>
+            </settings>
+        </column>
+        <column name="http_status_code">
+            <settings>
+                <filter>text</filter>
+                <label translate="true">HTTP Status</label>
             </settings>
         </column>
         <column name="created_at" class="Magento\Ui\Component\Listing\Columns\Date">

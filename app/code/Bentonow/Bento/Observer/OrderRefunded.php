@@ -31,7 +31,7 @@ class OrderRefunded implements ObserverInterface
                 'events' => [
                     [
                         'email' => $order->getCustomerEmail(),
-                        'type' => '$order_refunded',
+                        'type' => '$RefundCreated',
                         'fields' => [
                             'first_name' => $order->getCustomerFirstname(),
                             'last_name' => $order->getCustomerLastname(),

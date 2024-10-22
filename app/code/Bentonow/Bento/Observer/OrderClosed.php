@@ -32,7 +32,7 @@ class OrderClosed implements ObserverInterface
                     'events' => [
                         [
                             'email' => $order->getCustomerEmail(),
-                            'type' => '$order_closed',
+                            'type' => '$OrderFulfilled',
                             'fields' => [
                                 'first_name' => $order->getCustomerFirstname(),
                                 'last_name' => $order->getCustomerLastname(),

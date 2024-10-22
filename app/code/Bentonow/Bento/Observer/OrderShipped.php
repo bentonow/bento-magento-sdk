@@ -33,7 +33,7 @@ class OrderShipped implements ObserverInterface
                 'events' => [
                     [
                         'email' => $order->getCustomerEmail(),
-                        'type' => '$order_shipped',
+                        'type' => '$OrderShipped',
                         'fields' => [
                             'first_name' => $order->getCustomerFirstname(),
                             'last_name' => $order->getCustomerLastname(),

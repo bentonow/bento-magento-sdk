@@ -12,16 +12,26 @@
             <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
                 <label>General Configuration</label>
                 <field id="username" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
-                    <label>Username</label>
+                    <label>BENTO_PUBLISHABLE_KEY</label>
                     <config_path>bentonow_bento/general/username</config_path>
                 </field>
                 <field id="password" translate="label" type="obscure" sortOrder="2" showInDefault="1" showInWebsite="0" showInStore="0">
-                    <label>Password</label>
+                    <label>BENTO_SECRET_KEY</label>
                     <config_path>bentonow_bento/general/password</config_path>
                 </field>
                 <field id="site_uuid" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="0" showInStore="0">
-                    <label>Site UUID</label>
+                    <label>Site BENTO_SITE_UUID</label>
                     <config_path>bentonow_bento/general/site_uuid</config_path>
+                </field>
+                <field id="enable_customer_register" translate="label" type="select" sortOrder="4" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Enable Subscriber Sync</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <config_path>bentonow_bento/general/enable_customer_register</config_path>
+                </field>
+                <field id="customer_tags" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Subscriber Registration Tags</label>
+                    <comment>Comma-separated list of tags (e.g., lead,mql)</comment>
+                    <config_path>bentonow_bento/general/customer_tags</config_path>
                 </field>
             </group>
         </section>

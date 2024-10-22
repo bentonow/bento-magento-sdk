@@ -30,7 +30,7 @@ class OrderHeld implements ObserverInterface
                 'events' => [
                     [
                         'email' => $order->getCustomerEmail(),
-                        'type' => '$order_held',
+                        'type' => '$OrderHeld',
                         'fields' => [
                             'first_name' => $order->getCustomerFirstname(),
                             'last_name' => $order->getCustomerLastname(),

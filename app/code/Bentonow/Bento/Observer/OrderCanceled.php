@@ -30,7 +30,7 @@ class OrderCanceled implements ObserverInterface
                 'events' => [
                     [
                         'email' => $order->getCustomerEmail(),
-                        'type' => '$order_canceled',
+                        'type' => '$OrderCancelled',
                         'fields' => [
                             'first_name' => $order->getCustomerFirstname(),
                             'last_name' => $order->getCustomerLastname(),

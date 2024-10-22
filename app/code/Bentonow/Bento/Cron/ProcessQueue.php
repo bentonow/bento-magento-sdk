@@ -47,13 +47,16 @@ class ProcessQueue
 
         $this->curl->post($url, json_encode($data));
 
+        $statusCode = $this->curl->getStatus();
         $response = $this->curl->getBody();
 
-        if ($this->curl->getStatus() === 200) {
-            $job->setData('status', 'completed');
+        $job->setHttpStatusCode($statusCode);
+
+        if ($statusCode >= 200 && $statusCode < 300) {
+            $job->setStatus('completed');
         } else {
-            $job->setData('status', 'error');
-            $job->setData('error_message', $response);
+            $job->setStatus('error');
+            $job->setErrorMessage($response);
         }
 
         $job->save();
