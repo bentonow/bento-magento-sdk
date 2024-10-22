@@ -3,7 +3,8 @@
 
 Track events, update data, record LTV and more. Data is stored in your Bento account so you can easily research and investigate what's going on.
 
-👋 To get personalized support, please tweet @bento or email jesse@bentonow.com!
+> [!TIP]
+> 👋 Need help? Join our [Discord](https://discord.gg/ssXXFRmt5F) or email jesse@bentonow.com for personalized support.
 
 🐶 Tested on Magento 2.4.x
 
@@ -29,9 +30,9 @@ bin/magento cache:flush
 ```
 4. In the Magento admin panel, navigate to Stores > Configuration > Bento
 5. Enter your Bento API credentials:
-    - Username
-    - Password
-    - Site UUID
+    - BENTO_PUBLISHABLE_KEY
+    - BENTO_SECRET_KEY
+    - BENTO_SITE_UUID
 
 ## Configuration
 <p align="center"><img src="/artwork/configuration_options.webp" alt="Bento job queue"></p>
@@ -49,7 +50,7 @@ The Bento module can be configured in the Magento admin panel under Stores > Con
 ### Customer Events
 
 ```
-$subscriber
+$Subscriber
 
 Sent when a new customer registers
 Keys:
@@ -68,7 +69,7 @@ Notes:
 ### Order Events
 
 ```
-$purchase
+$Purchase
 
 Sent when a new order is placed
 Keys:
@@ -90,7 +91,7 @@ Notes:
 ```
 
 ```
-$order_shipped
+$OrderShipped
 
 Sent when an order is marked as shipped
 Keys:
@@ -111,7 +112,7 @@ Notes:
 ```
 
 ```
-$order_refunded
+$OrderRefunded
 
 Sent when an order is refunded
 Keys:
@@ -131,7 +132,7 @@ Notes:
 ```
 
 ```
-$order_held
+$OrderHeld
 
 Sent when an order is placed on hold
 Keys:
@@ -149,7 +150,7 @@ Notes:
 ```
 
 ```
-$order_canceled
+$OrderCanceled
 
 Sent when an order is canceled
 Keys:
@@ -168,7 +169,7 @@ Notes:
 ```
 
 ```
-$order_closed
+$OrderClosed
 
 Sent when an order is closed
 Keys:
@@ -267,14 +268,10 @@ The module logs all API communication and errors to:
 - `var/log/system.log`
 - `var/log/debug.log`
 
+## Contributing
+
+We welcome contributions! Please see our [contributing guidelines](CODE_OF_CONDUCT.md) for details on how to submit pull requests, report issues, and suggest improvements.
+
 ## License
 
-The Bento Magento 2 module is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 2 of the License, or
-any later version.
-
-The Bento Magento 2 module is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-GNU General Public License for more details.
+The Bento SDK for Laravel is available as open source under the terms of the [MIT License](LICENSE.md).
